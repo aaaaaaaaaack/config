@@ -1,0 +1,53 @@
+;
+;
+;
+;
+;
+
+[colors]
+bg = #121420
+fg = #F8FCDA
+light-color = #B76D68
+transparent = #00000000
+
+
+[bar/tray]
+width = 6%
+height = 24pt
+radius = 8
+offset-x = 22%
+offset-y = 0.2%
+override-redirect = false
+padding-left = 1
+padding-right = 1
+line-size = 2pt
+
+background = ${colors.transparent}
+foreground = ${colors.fg}
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+font-0 = monospace:size=10;4
+font-1 = Source Code Pro:style=Bold:size=8;4
+font-2 = FontAwesome:style=Regular:size=8;1
+font-3 = icomoon feather:size=12;3
+font-4 = TerminessTTF Nerd Font:size=14;3
+
+enable-ipc = true
+wm-restack = bspwm
+
+tray-position = center
+tray-padding = 2
+tray-background = ${colors.bg}
+
+modules-left = brave
+
+
+
+# open filemanageer
+[module/brave]
+type = custom/text
+content = " "
+
+

@@ -1,0 +1,54 @@
+window:
+  padding:
+    x: 8
+    y: 8
+
+font:
+  normal:
+    family: Victor Mono Medium
+  size: 8
+
+colors:
+  primary:
+    #    background: '0x282828'
+    background: '0x16161a'
+    #    foreground: '0xdfbf8e'
+    foreground: '0xfffffe'
+  
+  cursor:
+    text: '0xfef4b1'
+    cursor: '0x625281'
+
+  normal:
+    black: '0xb094da'
+    red: '0xefb8ac'
+    green: '0x6be757'
+    yellow: '0x9ddc27'
+    blue: '0x8f9dd4'
+    magenta: '0xd3869b'
+    cyan: '0xe853f5'
+    white: '0xe4df8e'
+
+key_bindings:
+- key: V
+  mods: Control|Shift
+  action: Paste
+- key: C
+  mods: Control|Shift
+  action: Copy
+- key: H
+  mods: Alt
+  chars: "\eh"
+- key: J
+  mods: Alt
+  chars: "\ej"
+- key: K
+  mods: Alt
+  chars: "\ek"
+- key: L
+  mods: Alt
+  chars: "\el"
+cursor:
+  style:
+    blinking: Always
+  blink_interval: 550

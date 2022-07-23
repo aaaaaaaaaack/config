@@ -1,0 +1,117 @@
+;
+;
+;
+;
+;
+
+[colors]
+bg = #121420
+fg = #F8FCDA
+light-color = #B76D68
+transparent = #00000000
+co = #77c819
+empty = #636a94
+
+[bar/right]
+width = 24%
+height = 24pt
+radius = 8
+offset-x = 75%
+offset-y = 0.2%
+override-redirect = false
+padding = 2
+line-size = 2pt
+
+background = ${colors.transparent}
+foreground = ${colors.empty}
+
+font-0 = Victor Mono Medium:style=Bold:size=12;4
+font-1 = Source Code Pro:style=Bold:size=8;4
+font-2 = FontAwesome:style=Regular:size=8;1
+font-3 = icomoon feather:size=12;3
+font-4 = TerminessTTF Nerd Font:size=14;2
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+tray-position = right
+
+separator = " "
+
+enable-ipc = true
+wm-restack = bspwm
+
+modules-center = shutdown pulseaudio battery memory wlan eth clock
+
+[module/clock]
+type = internal/date
+interval = 1
+
+date = %H:%M
+date-alt =  %Y-%m-%d %H:%M:%S
+date-font = 0 
+format-prefix = " "
+format-prefix-font = 4
+
+[network-base]
+type = internal/network
+interval = 5
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+format-font = 0
+
+[module/wlan]
+inherit = network-base
+interface-type = wireless
+label-connected =  %upspeed%
+label-font = 0
+
+[module/eth]
+inherit = network-base
+interface-type = wired
+label-connected = $local_ip%
+label-font = 0
+
+[module/battery]
+type = internal/battery
+
+low-at = 20
+battery = BAT1
+adapter = ACAD
+
+format-charging = <label-charging>
+
+label-charging-prefix = ﮣ
+label-charging =  %percentage%
+label-discharging =  %percentage%
+label-full =  %percentage%
+label-low = 
+label-font = 4
+label-foreground = ${colors.co}
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-font = 4
+label = %gb_used%
+label-font = 0
+
+[module/shutdown]
+type = custom/text
+content = 
+content-font = 4
+click-left = ~/.config/polybar/scripts/shutdown.sh
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume-prefix = "墳 "
+format-volume-prefix-font = 4
+format-volume = <label-volume>
+
+label-volume = %percentage%%
+label-volume-font = 0
+label-muted = 
+label-muted-foreground = ${colors.disabled}
+label-font = 4
