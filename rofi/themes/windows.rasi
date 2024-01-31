@@ -1,122 +1,108 @@
-
 * {
-  font: "Victor Mono Bold 10";
+  font: "Monocraft 12";
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+  background-color: transparent;
 
-  bg0    : #232946;
-  bg1    : #202020bf;
-  bg2    : #2c2c2c;
-  bg3    : #eebbc3;
-  fg0    : #fffffe;
-  fg1    : #cecece;
-  accent : #60cdff;
-  btntxt : #232946;
-  
-  black : #000000;
-  white : #ffffff;
-  
-  background-color : @white;
-  text-color       : @black;
-
-  margin  : 0;
-  padding : 0;
-  spacing : 0;
+  black: #000000;
+  pink: #ffdff0;
 }
 
-element-icon, element-text, scrollbar {
+element-icon,
+element-text,
+scrollbar {
   cursor: pointer;
 }
 
 window {
-  width    : 600px;
-  height   : 600px;
-  y-offset : -4px;
-
-  background-color : @white;
-  border    : 1px solid;
-  border-radius : 8px;
-  border-color  : @black;
-  padding    : 12px;
- // border-radius    : 12px;
-}
-
-mainbox {
-  //padding : 12px;
-  //spacing : 24px;
+  width: 1700px;
+  height: 960px;
+  y-offset: -4px;
+  background-image: url(
+    "/home/mustardus/Pictures/iglesia-ni-chaewon.jpg",
+    both
+  );
+  border: 1px solid;
+  //border-radius : 8px;
+  //padding    : 12px;
 }
 
 inputbar {
-  padding          : 8px;
-  spacing          : 4px;
-  children         : [ icon-search, entry ];
-  border           : 0 0 2px 0 solid;
-  border-color     : @black;
-  border-radius    : 0;
-  background-color : @fg0;
+  padding: 16px;
+  spacing: 4px;
+  children: [ icon-search, entry];
+  border: 0 0 2px 0 solid;
+  border-color: @black;
+  border-radius: 0;
 }
 
-icon-search, entry, element-icon, element-text {
+icon-search,
+entry,
+element-icon,
+element-text {
   vertical-align: 0.5;
 }
 
 icon-search {
-  expand   : false;
-  filename : "search-symbolic";
-  size     : 24px;
-  background-color  : @fg0;
+  expand: false;
+  filename: "search-symbolic";
+  size: 24px;
+  padding: 6px;
+  background-color: rgba(248, 187, 218, 0.19);
 }
 
 entry {
-  font              : "Roboto 12";
-  placeholder       : "Type here to search";
-  border-radius     : 16px;
-  text-color        : @bg0;
-  placeholder-color : @bg0;
-  background-color  : @fg0;
+  font: "Monocarft 14";
+  placeholder: "Type here to search";
+  border-radius: 16px;
+  text-color: #fed5e9;
 }
 
 textbox {
-  padding          : 4px 8px;
-  background-color : @bg3;
-  text-color       : @bg0;
+  padding: 4px 8px;
 }
 
 listview {
-  columns       : 2;
-  spacing       : 8px;
-  fixed-height  : true;
-  fixed-columns : true;
+  columns: 1;
+  spacing: 8px;
+  padding: 0 12px;
+  fixed-height: true;
+  fixed-columns: true;
+  //background-color: rgba(248, 187, 218, 0.19);
 }
 
 element {
-  spacing       : 1em;
-  padding       : 8px;
-  border-radius : 2px;
+  text-color: #fed5e9;
+  spacing: 1em;
+  margin: 0 2px;
+  padding: 8px;
+  border-radius: 2px;
+  children: [element-text];
 }
 
 element normal urgent {
-  text-color: @urgent;
+  //text-color: @urgent;
 }
 
 element normal active {
-  text-color: @accent;
+  //ext-color: @accent;
 }
 
 element selected {
-  background-color: @white;
+  background-color: rgba(255, 116, 154, 0.31);
 }
 
 element-icon selected {
-  background-color: @white;
+  //background-color: @white;
 }
 
 element-text selected {
-    background-color: @white;
-    text-color: @btntxt;
-    border  : 0 0 2px 0 solid;
-    border-color: @black;
-  }
+  //border  : 0 0 2px 0 solid;
+  border-color: @black;
+}
 element selected urgent {
-  background-color: @bg3;
+  background-color: #fed5e9;
 }
 
 element-icon {
@@ -126,10 +112,11 @@ element-icon {
 element-text {
   text-color: inherit;
 }
+button {
+  background-color: #fed5e9;
+  padding: 12px;
+}
 button selected {
-  text-color : @bg0;
-  background-color : @white;
   border: 1px solid;
-  border-color: @black;
   padding: 5px;
 }
