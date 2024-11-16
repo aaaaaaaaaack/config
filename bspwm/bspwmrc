@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d ● ● ● ● ● ●
+bspc monitor -d I II III IV V VI
 wmname LG3D
 
 bspc config border_width         2
@@ -23,3 +23,9 @@ bspc config gapless_monocle      true
 
 #for cursor
 xsetroot -cursor_name left_ptr &
+picom &
+nm-applet &
+flameshot &
+setxkbmap -option caps:swapescape
+nitrogen --restore 
+$HOME/.config/polybar/launch_bar.sh

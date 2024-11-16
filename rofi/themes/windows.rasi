@@ -20,7 +20,7 @@ window {
   height: 960px;
   y-offset: -4px;
   background-image: url(
-    "/home/mustardus/Pictures/iglesia-ni-chaewon.jpg",
+    "/home/mustardus/.config/rofi/themes/ic2.jpg",
     both
   );
   border: 1px solid;

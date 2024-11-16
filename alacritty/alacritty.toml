@@ -1,0 +1,66 @@
+[env]
+TERM = "xterm-256color"
+
+[colors.cursor]
+cursor = "0x625281"
+text = "0xfef4b1"
+
+[colors.normal]
+black = "0xb094da"
+blue = "0x8f9dd4"
+cyan = "0xe853f5"
+green = "0x6be757"
+magenta = "0xd3869b"
+red = "0xefb8ac"
+white = "0xe4df8e"
+yellow = "0x9ddc27"
+
+[colors.primary]
+background = "0x16161a"
+foreground = "0xfffffe"
+
+[cursor]
+blink_interval = 550
+
+[cursor.style]
+blinking = "Always"
+
+[font]
+size = 8
+
+[font.normal]
+family = "Victor Mono Medium"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001Bh"
+key = "H"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001Bj"
+key = "J"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001Bk"
+key = "K"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001Bl"
+key = "L"
+mods = "Alt"
+
+[window.padding]
+x = 8
+y = 8
