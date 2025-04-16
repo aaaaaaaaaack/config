@@ -1,7 +1,7 @@
 return {
     {
         'johnfrankmorgan/whitespace.nvim',
-        config = function ()
+        config = function()
             local whitespace = require('whitespace-nvim')
             whitespace.setup({
                 -- configuration options and their defaults
@@ -24,7 +24,7 @@ return {
 
             -- remove trailing whitespace with a keybinding
             vim.keymap.set('n', '<Leader>ss', function() whitespace:trim() end,
-            {desc = "Removed trailing whitespace"})
+                { desc = "Removed trailing whitespace" })
         end
     },
     {
@@ -32,27 +32,10 @@ return {
         main = "ibl",
         config = function()
             require('ibl').setup {
-                scope = { 
+                scope = {
                     enabled = true,
                 },
             }
         end,
     },
-    -- {
-    --     "fraso-dev/nvim-listchars",
-    --     config = function()
-    --         require("nvim-listchars").setup({
-    --             save_state = false,
-    --             listchars = {
-    --                 trail = "x",
-    --                 eol = "↲",
-    --                 tab = "» ",
-    --             },
-    --             exclude_filetypes = {
-    --                 "markdown"
-    --             },
-    --             lighten_step = 10,
-    --         })
-    --     end,
-    -- }
 }
